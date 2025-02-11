@@ -1,0 +1,30 @@
+public class MatrixInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int rows = scanner.nextInt();
+       
+        int columns = scanner.nextInt();
+       
+        int[][] matrix = new int[rows][columns];
+        
+        // Fill the matrix with data from the console
+          for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print("Enter element [" + i + "][" + j + "]: ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Print the matrix
+        System.out.println("The matrix you entered is:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();  // Move to the next line after each row
+        }
+        
+        scanner.close();
+    }
+}
